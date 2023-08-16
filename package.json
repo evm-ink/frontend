@@ -8,6 +8,7 @@
     "build": "tsc && vite build",
     "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
+    "generate": "env-cmd -f .env graphql-codegen --config codegen.ts",
     "bnb:generate": "env-cmd -f .env.bnb.local graphql-codegen --config codegen.ts",
     "polygon:generate": "env-cmd -f .env.polygon.local graphql-codegen --config codegen.ts",
     "test": "vitest",
