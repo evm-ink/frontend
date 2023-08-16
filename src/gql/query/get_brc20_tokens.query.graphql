@@ -1,0 +1,24 @@
+query GetBrc20Tokens(
+  $limit: Int = 10
+  $offset: Int = 0
+  $order_by: [brc20_tokens_order_by!] = {}
+  $where: brc20_tokens_bool_exp = {}
+) {
+  brc20_tokens(
+    limit: $limit
+    offset: $offset
+    order_by: $order_by
+    where: $where
+  ) {
+    decimal_digits
+    decimals
+    max_supply
+    mint_limit
+    minted_total
+    protocol
+    stats {
+      holders
+    }
+    tick
+  }
+}

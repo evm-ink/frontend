@@ -1,0 +1,12 @@
+query GetNewCollectionById($id: String!) {
+  new_collections_by_pk(id: $id) {
+    bin_runtime
+    contract_address
+    creator
+    error
+    max_claim
+    price
+    progress
+    status
+  }
+}

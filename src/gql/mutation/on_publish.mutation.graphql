@@ -1,0 +1,5 @@
+mutation OnPublish($slug: String!) {
+  on_publish(object: { slug: $slug }) {
+    ok
+  }
+}

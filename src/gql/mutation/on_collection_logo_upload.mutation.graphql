@@ -1,0 +1,5 @@
+mutation OnCollectionLogoUpload($slug: String!) {
+  on_collection_logo_upload(object: { slug: $slug }) {
+    ok
+  }
+}

@@ -1,0 +1,5 @@
+mutation OnCollectionBannerUpload($slug: String!) {
+  on_collection_banner_upload(object: { slug: $slug }) {
+    ok
+  }
+}

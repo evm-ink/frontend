@@ -1,0 +1,7 @@
+mutation OnNewCollectionUpload($new_collection_uuid: String!) {
+  on_new_collection_upload(
+    object: { new_collection_uuid: $new_collection_uuid }
+  ) {
+    ok
+  }
+}

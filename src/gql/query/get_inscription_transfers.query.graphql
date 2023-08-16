@@ -1,0 +1,14 @@
+query GetInscriptionTransfers($trxHash: String!) {
+  inscription_transfers(
+    order_by: { transferred_at: desc_nulls_last }
+    where: { trx_hash: { _eq: $trxHash } }
+  ) {
+    block_number
+    confirmed
+    from_address
+    to_address
+    transferred_at
+    transferring_trx
+    trx_hash
+  }
+}

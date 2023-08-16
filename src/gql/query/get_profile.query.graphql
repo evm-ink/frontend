@@ -1,0 +1,15 @@
+# query GetUserProfile($accountAddress: String!) {
+#   userInfo(where: { account_address: { _eq: $accountAddress } }) {
+#     account_address
+#     bio
+#     discord_username
+#     facebook_username
+#     full_name
+#     id
+#     instagram_username
+#     telegram_username
+#     twitter_username
+#     username
+#     profile_img_url
+#   }
+# }

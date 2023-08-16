@@ -1,0 +1,10 @@
+mutation SignIn(
+  $message: String!
+  $sigR: String!
+  $sigS: String!
+  $sigV: String!
+) {
+  signIn(object: { message: $message, sigR: $sigR, sigS: $sigS, sigV: $sigV }) {
+    token
+  }
+}

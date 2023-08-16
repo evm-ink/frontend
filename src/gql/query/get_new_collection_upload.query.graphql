@@ -1,0 +1,6 @@
+query GetNewCollectionUpload {
+  new_collection_upload {
+    new_collection_uuid
+    pre_signed_url
+  }
+}

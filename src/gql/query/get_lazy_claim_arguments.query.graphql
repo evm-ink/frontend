@@ -1,0 +1,5 @@
+query GetLazyClaimArguments($id: String!, $slug: String!) {
+  lazy_claim(object: { id: $id, slug: $slug }) {
+    calldata
+  }
+}

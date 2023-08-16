@@ -1,0 +1,27 @@
+query GetNewCollectionFilesInfo($collectionId: String!) {
+  total_files_count: new_collection_files_aggregate(
+    where: { new_collection: { id: { _eq: $collectionId } } }
+  ) {
+    aggregate {
+      count
+    }
+  }
+  rejected_files_count: new_collection_files_aggregate(
+    where: {
+      new_collection: { id: { _eq: $collectionId } }
+      _or: [{ size: { _gt: "98000" } }, { duplicate: { _eq: true } }]
+    }
+  ) {
+    aggregate {
+      count
+    }
+  }
+  rejected_files: new_collection_files(
+    where: {
+      new_collection: { id: { _eq: $collectionId } }
+      _or: [{ size: { _gt: "98000" } }, { duplicate: { _eq: true } }]
+    }
+  ) {
+    url
+  }
+}

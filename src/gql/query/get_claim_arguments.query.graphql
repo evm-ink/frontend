@@ -1,0 +1,6 @@
+query GetClaimArguments($inscription: String!) {
+  claim(inscription: $inscription) {
+    claimed
+    signature
+  }
+}

@@ -1,0 +1,16 @@
+query GetInscriptionByTrxHash($trxHash: String!) {
+  inscriptions(where: { trx_hash: { _eq: $trxHash } }) {
+    block_number
+    confirmed
+    content_uri
+    created_at
+    creator_address
+    id
+    position
+    owner_address
+    trx_hash
+    category
+    mtype
+    internal_trx_index
+  }
+}

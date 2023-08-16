@@ -1,0 +1,32 @@
+query GetCollections(
+  $limit: Int = 10
+  $offset: Int = 0
+  $order_by: [collections_order_by!] = {}
+  $where: collections_bool_exp = {}
+) {
+  collections(
+    limit: $limit
+    offset: $offset
+    order_by: $order_by
+    where: $where
+  ) {
+    contract_address
+    creator
+    description
+    discord_username
+    external_url
+    instagram_username
+    is_mintable
+    is_verified
+    medium_username
+    minted
+    name
+    price
+    slug
+    telegram_username
+    total_supply
+    twitter_username
+    logo_image_url
+    banner_image_url
+  }
+}

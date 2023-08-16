@@ -1,0 +1,5 @@
+mutation CancelNewCollection($newCollectionUUID: String!) {
+  cancel_new_collection(object: { new_collection_uuid: $newCollectionUUID }) {
+    ok
+  }
+}

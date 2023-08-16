@@ -1,0 +1,6 @@
+query GetCollectionUploadUrls($slug: String!) {
+  get_collection_upload_urls(object: { slug: $slug }) {
+    banner_url
+    logo_url
+  }
+}

@@ -1,0 +1,10 @@
+query GetInscriptionTraits($where: inscription_traits_bool_exp = {}) {
+  inscription_traits(where: $where) {
+    display_type
+    trait_percent
+    trait_type
+    trait_value
+    trait_value_count
+    trx_hash
+  }
+}

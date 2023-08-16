@@ -1,0 +1,29 @@
+mutation CreateCollection(
+  $name: String!
+  $description: String!
+  $slug: String!
+  $new_collection_uuid: String!
+  $discord_username: String = ""
+  $external_url: String = ""
+  $instagram_username: String = ""
+  $medium_username: String = ""
+  $telegram_username: String = ""
+  $twitter_username: String = ""
+) {
+  create_collection(
+    object: {
+      description: $description
+      discord_username: $discord_username
+      external_url: $external_url
+      instagram_username: $instagram_username
+      medium_username: $medium_username
+      name: $name
+      new_collection_uuid: $new_collection_uuid
+      slug: $slug
+      telegram_username: $telegram_username
+      twitter_username: $twitter_username
+    }
+  ) {
+    ok
+  }
+}

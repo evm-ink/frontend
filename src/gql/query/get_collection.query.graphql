@@ -1,0 +1,31 @@
+query GetCollection($slug: String!, $ownerAddress: String = "") {
+  collections(where: { slug: { _eq: $slug } }) {
+    contract_address
+    creator
+    description
+    discord_username
+    external_url
+    instagram_username
+    mint_type
+    is_mintable
+    is_verified
+    medium_username
+    minted
+    max_claim
+    name
+    price
+    slug
+    telegram_username
+    total_supply
+    twitter_username
+    logo_image_url
+    banner_image_url
+    inscriptions_aggregate(
+      where: { inscription: { owner_address: { _eq: $ownerAddress } } }
+    ) {
+      aggregate {
+        count
+      }
+    }
+  }
+}

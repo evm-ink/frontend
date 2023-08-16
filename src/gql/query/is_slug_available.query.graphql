@@ -1,0 +1,5 @@
+query IsSlugAvailable($slug: String = "") {
+  collections(where: { slug: { _eq: $slug } }) {
+    slug
+  }
+}

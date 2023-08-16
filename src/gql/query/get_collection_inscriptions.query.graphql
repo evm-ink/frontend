@@ -1,0 +1,29 @@
+query GetCollectionInscriptions($slug: String!, $limit: Int!, $offset: Int!) {
+  collection_inscriptions(
+    where: { collection: { slug: { _eq: $slug } } }
+    order_by: { position: asc_nulls_last }
+    limit: $limit
+    offset: $offset
+  ) {
+    claimed
+    position
+    trx_hash
+    inscription {
+      ...inscriptionsFragment
+    }
+  }
+}
+
+fragment inscriptionsFragment on inscriptions {
+  block_number
+  category
+  confirmed
+  content_uri
+  created_at
+  creator_address
+  id
+  owner_address
+  trx_hash
+  mtype
+  internal_trx_index
+}

@@ -1,0 +1,26 @@
+query GetInscriptions(
+  $limit: Int
+  $offset: Int
+  $order_by: [inscriptions_order_by!] = {}
+  $where: inscriptions_bool_exp = {}
+) {
+  inscriptions(
+    limit: $limit
+    offset: $offset
+    order_by: $order_by
+    where: $where
+  ) {
+    block_number
+    confirmed
+    content_uri
+    created_at
+    creator_address
+    owner_address
+    trx_hash
+    id
+    position
+    category
+    mtype
+    internal_trx_index
+  }
+}

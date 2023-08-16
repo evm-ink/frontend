@@ -1,0 +1,5 @@
+query GetCollectionStats {
+  collection_stats {
+    in_progress
+  }
+}

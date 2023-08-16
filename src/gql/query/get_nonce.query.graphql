@@ -1,0 +1,5 @@
+query GetNonce {
+  signedMessage {
+    message
+  }
+}

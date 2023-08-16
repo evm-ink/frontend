@@ -1,0 +1,19 @@
+mutation UpdateNewCollectionsById(
+  $id: String!
+  $max_claim: numeric!
+  $price: numeric!
+) {
+  update_new_collections_by_pk(
+    pk_columns: { id: $id }
+    _set: { max_claim: $max_claim, price: $price }
+  ) {
+    bin_runtime
+    contract_address
+    creator
+    error
+    max_claim
+    price
+    progress
+    status
+  }
+}
